@@ -13,6 +13,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/corvus/prebuilt/common/etc/selective-spn-conf.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/selective-spn-conf.xml
 
-# SIM Toolkit
+# Telephony Packages
 PRODUCT_PACKAGES += \
-    Stk
+    messaging \
+    Stk \
+    CellBroadcastReceiver

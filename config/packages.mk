@@ -8,7 +8,6 @@ PRODUCT_PACKAGES += \
     Corvus-Themes \
     LiveWallpapers \
     LiveWallpapersPicker \
-    messaging \
     StitchImage \
     StitchImageService \
     ThemePicker \
@@ -32,6 +31,10 @@ PRODUCT_PACKAGES += \
     mkfs.exfat \
     mkfs.ntfs \
     mount.ntfs
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
 
 # Allows registering device to Google easier for gapps
 # Integrates package for easier Google Pay fixing

@@ -28,13 +28,14 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.iorapd.enable=true \
     net.tethering.noprovisioning=true \
     keyguard.no_require_sim=true \
-    persist.sys.disable_rescue=true \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
-    ro.build.selinux=1
+    persist.sys.disable_rescue=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.services.whitelist.packagelist=com.google.android.gms
+
+# Enforce privapp-permissions whitelist
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.control_privapp_permissions=enforce
 
 # This needs to be specified explicitly to override ro.apex.updatable=true from
 # prebuilt vendors, as init reads /product/build.prop after /vendor/build.prop
