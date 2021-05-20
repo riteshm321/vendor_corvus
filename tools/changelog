@@ -27,7 +27,7 @@ k=$(expr $i - 1)
 
 while read path;
 do
-    Git_log=`git --git-dir ./${path}/.git log --after=$After_Date --until=$Until_Date --pretty=tformat:"%h  %s  [%an]" --abbrev-commit --abbrev=7`
+    Git_log=`git --git-dir ./${path}/.git log --after=$After_Date --until=$Until_Date --pretty=tformat:"%h  %s" --abbrev-commit --abbrev=7`
     if [ ! -z "${Git_log}" ]; then
         echo "\n* ${path}\n${Git_log}\n" >> $Changelog;
     fi
