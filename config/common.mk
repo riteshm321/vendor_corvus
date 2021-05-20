@@ -26,16 +26,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     setupwizard.feature.predeferred_enabled=false \
     drm.service.enabled=true \
     ro.iorapd.enable=true \
+    iorapd.perfetto.enable=true \
+    iorapd.readahead.enable=true \
     net.tethering.noprovisioning=true \
     keyguard.no_require_sim=true \
-    persist.sys.disable_rescue=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.services.whitelist.packagelist=com.google.android.gms
-
-# Enforce privapp-permissions whitelist
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.control_privapp_permissions=enforce
+    persist.sys.disable_rescue=true \
+    ro.build.selinux=1
 
 # This needs to be specified explicitly to override ro.apex.updatable=true from
 # prebuilt vendors, as init reads /product/build.prop after /vendor/build.prop
@@ -61,9 +57,7 @@ PRODUCT_COPY_FILES += \
     vendor/corvus/prebuilt/common/etc/permissions/corvus-power-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/corvus-power-whitelist.xml \
     vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-corvus-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-corvus-system.xml \
     vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-corvus-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-corvus-product.xml \
-    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-recorder.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-recorder.xml \
     vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-corvus-system_ext.xml:$(TARGET_OUT_SYSTEM_EXT_ETC)/etc/permissions/privapp-permissions-corvus-system_ext.xml \
-    vendor/corvus/prebuilt/common/etc/permissions/privapp-permissions-elgoog.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-elgoog.xml \
     vendor/corvus/prebuilt/google/etc/sysconfig/pixel_experience_2020.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_experience_2020.xml 
    
 
