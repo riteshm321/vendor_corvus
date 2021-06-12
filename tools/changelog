@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Changelog=Changelog.txt
+Changelog=out/Changelog.txt
 
 DEVICE=$(echo $TARGET_PRODUCT | cut -d "_" -f2)
 
