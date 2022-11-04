@@ -37,7 +37,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.disable_rescue=true \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0 \
-    ro.input.video_enabled=false
+    ro.input.video_enabled=false \
+    ro.setupwizard.enterprise_mode=1 \
+    setupwizard.feature.predeferred_enabled=false \
+    ro.setupwizard.mode=OPTIONAL
 
 # SystemUI
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -76,7 +79,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     
 # Disable blur on app-launch
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
-    ro.launcher.blur.appLaunch=0
+    ro.launcher.blur.appLaunch=false
 
 # Disable remote keyguard animation
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
