@@ -3,7 +3,7 @@ RAVEN_LAIR := Unofficial
 CORVUS_VERSION_BASE := T5.1
 CORVUS_CODENAME := DejaVu
 
-ifneq ($(filter Trishiraj victor10520 KSSRAO ManavjitSingh MAdMiZ Fosslover Meghthedev PAiN KaderBava Roxor-007 H3M3L AnhTran Sukeerat EinarG Ankan005 Ajit YadavMohit19 Ritzzz,$(CORVUS_MAINTAINER)),)
+ifneq ($(filter Trishiraj victor10520 KSSRAO ManavjitSingh MAdMiZ Fosslover Meghthedev PAiN KaderBava Roxor-007 H3M3L AnhTran Sukeerat EinarG Ankan005 Ajit YadavMohit19 Ritzzz SpectreDev,$(CORVUS_MAINTAINER)),)
 RAVEN_LAIR := Official
 endif
 
