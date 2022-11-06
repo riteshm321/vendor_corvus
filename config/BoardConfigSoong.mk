@@ -31,6 +31,7 @@ SOONG_CONFIG_NAMESPACES += corvusGlobalVars
 SOONG_CONFIG_corvusGlobalVars += \
     additional_gralloc_10_usage_bits \
     camera_needs_client_info \
+    has_legacy_camera_hal1 \
     has_memfd_backport \
     target_init_vendor_lib \
     target_inputdispatcher_skip_event_key \
@@ -60,6 +61,7 @@ endif
 
 # Soong bool variables
 SOONG_CONFIG_corvusGlobalVars_camera_needs_client_info := $(TARGET_CAMERA_NEEDS_CLIENT_INFO)
+SOONG_CONFIG_corvusGlobalVars_has_legacy_camera_hal1 := $(TARGET_HAS_LEGACY_CAMERA_HAL1)
 SOONG_CONFIG_corvusGlobalVars_has_memfd_backport := $(TARGET_HAS_MEMFD_BACKPORT)
 SOONG_CONFIG_corvusGlobalVars_target_uses_prebuilt_dynamic_partitions := $(TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS)
 SOONG_CONFIG_corvusGlobalVars_uses_egl_display_array := $(TARGET_USES_EGL_DISPLAY_ARRAY)
